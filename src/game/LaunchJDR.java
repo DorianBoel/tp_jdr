@@ -22,23 +22,23 @@ public class LaunchJDR {
 	 * </p>
 	 * <ul>
 	 * 		<li>
-	 * 			"M" : display the menu (calls
+	 * 			<strong>M</strong> : display the menu (calls
 	 * 			{@link game.engine.Game#displayMenu Game.displayMenu})
 	 * 		</li>
 	 * 		<li>
-	 * 			"1" : create a new character (calls
+	 * 			<strong>1</strong> : create a new character (calls
 	 * 			{@link game.engine.Game#createCharacter Game.createCharacter})
 	 * 		</li>
 	 * 		<li>
-	 * 			"2" : choose a monster to fight (calls
+	 * 			<strong>2</strong> : choose a monster to fight (calls
 	 * 			{@link game.engine.Game#fightMonster Game.fightMonster})
 	 * 		</li>
 	 * 		<li>
-	 * 			"3" : display the current character's statistics (calls
+	 * 			<strong>3</strong> : display the current character's statistics (calls
 	 * 			{@link game.engine.Game#displayCharacterInfo Game.displayCharacterInfo})
 	 * 		</li>
 	 * 		<li>
-	 * 			"4" : exit the game loop and close the program
+	 * 			<strong>4</strong> : exit the game loop and close the program
 	 * 		</li>
 	 * </ul>
 	 * 

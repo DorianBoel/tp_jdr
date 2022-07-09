@@ -3,8 +3,53 @@ package game.engine;
 import game.entities.Monster;
 import game.entities.PlayerCharacter;
 
+/**
+ * Non-instanciable service class containing methods used
+ * display specific messages to the user based on different
+ * game states.
+ *
+ * @author DorianBoel
+ */
 public class GameDisplay {
 	
+	/**
+	 * Displays a specific message based on a current given game state
+	 * represented by a flag argument.
+	 * <p>
+	 * 		The flags are the following:
+	 * </p>
+	 * <ul>
+	 * 		<li>
+	 * 			<strong>confirm-new-character</strong>: Asks the user to confirm before replacing
+	 * 			the current player character with a new one.
+	 * 		</li>
+	 * 		<li>
+	 * 			<strong>confirm-quit</strong>: Asks the user to confirm before quitting the game.
+	 * 		</li>
+	 * 		<li>
+	 * 			<strong>exit</strong>: The app has stopped.
+	 * 		</li>
+	 * 		<li>
+	 * 			<strong>fight-menu</strong>: The menu allowing the user to select a monster to fight.
+	 * 		</li>
+	 * 		<li>
+	 * 			<strong>invalid</strong>: User input does not match any available options.
+	 * 		</li>
+	 * 		<li>
+	 * 			<strong>menu</strong>: The main game menu.
+	 * 		</li>
+	 * 		<li>
+	 * 			<strong>start</strong>: The game has started.
+	 * 		</li>
+	 * 		<li>
+	 * 			<strong>undefined-character</strong>: Asks the user to create a 
+	 * 			new character before continuing.
+	 * 		</li>
+	 * </ul>
+	 * 
+	 * @param state A flag describing on a specific game state determining
+	 * which message to display
+	 */
 	public static void displayState(String state) {
 		switch (state) {
 			case ("confirm-new-character") :
@@ -50,6 +95,42 @@ public class GameDisplay {
 		System.out.println();
 	}
 	
+	/**
+	 * Displays a specific message based on a current given game state
+	 * represented by a flag argument and regarding the 
+	 * current player character and/or monster.
+	 * <p>
+	 * 		The flags are the following:
+	 * </p>
+	 * <ul>
+	 * 		<li>
+	 * 			<strong>fight-start</strong>: A fight against a new monster has been initiated.
+	 * 		</li>
+	 * 		<li>
+	 * 			<strong>game-over</strong>: Displays character info after a player defeat.
+	 * 		</li>
+	 * 		<li>
+	 * 			<strong>new-character</strong>: A new player character has been created.
+	 * 		</li>
+	 * 		<li>
+	 * 			<strong>player-defeat</strong>: The player character has been defeated.
+	 * 		</li>
+	 * 		<li>
+	 * 			<strong>player-info</strong>: Displays current player character info.
+	 * 		</li>
+	 * 		<li>
+	 * 			<strong>player-win</strong>: Displays fight results after a player victory.
+	 * 		</li>
+	 * 		<li>
+	 * 			<strong>resist-attack</strong>: A round during the fight ended in a draw.
+	 * 		</li>
+	 * </ul>
+	 * 
+	 * @param state A flag describing on a specific game state determining
+	 * which message to display
+	 * @param player The current player character in use for which to display info
+	 * @param monster The current monster being fought for which to display info
+	 */
 	public static void displayState(String state, PlayerCharacter player, Monster monster) {
 		switch (state) {
 			case ("fight-start") :
@@ -92,6 +173,29 @@ public class GameDisplay {
 		System.out.println();
 	}
 	
+	/**
+	 * Displays a specific message based on a current given game state
+	 * represented by a flag argument and regarding the 
+	 * current player character and/or monster taking a 
+	 * given amount of damage.
+	 * <p>
+	 * 		The flags are the following:
+	 * </p>
+	 * <ul>
+	 * 		<li>
+	 * 			<strong>monster-attack</strong>: The monster has won a round and inflicts damage to the player character.
+	 * 		</li>
+	 * 		<li>
+	 * 			<strong>player-attack</strong>: The player character has won a round and inflicts damage to the monster.
+	 * 		</li>
+	 * </ul>
+	 * 
+	 * @param state A flag describing on a specific game state determining
+	 * which message to display
+	 * @param player The current player character in use for which to display info
+	 * @param monster The current monster being fought for which to display info
+	 * @param damage The amount of damage being dealt to one entity during a round
+	 */
 	public static void displayState(String state, PlayerCharacter player, Monster monster, int damage) {
 		switch (state) {
 			case ("monster-attack") :
