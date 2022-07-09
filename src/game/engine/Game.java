@@ -86,7 +86,7 @@ public class Game {
 				fight(monsterSelect.toLowerCase());
 				break;
 			case ("") :
-			case ("N") :
+			case ("n") :
 				displayMenu();
 				break;
 			default :

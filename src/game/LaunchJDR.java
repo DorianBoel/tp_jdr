@@ -3,7 +3,7 @@ package game;
 import java.util.Scanner;
 import game.engine.Game;
 
-public class TestJDR {
+public class LaunchJDR {
 
 	public static void main(String[] args) {
 		
