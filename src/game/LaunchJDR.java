@@ -5,6 +5,40 @@ import game.engine.Game;
 
 public class LaunchJDR {
 
+	/**
+	 * Main method for launching the app. Starts the game loop then
+	 * asks the user for a prompt using a
+	 * {@linkplain java.util.Scanner Scanner},
+	 * then calls the corresponding method from the 
+	 * {@linkplain game.engine.Game Game} controller
+	 * as long as the user doesn't choose to quit the program.
+	 * <p>
+	 * 		The valid prompts are as follows:
+	 * </p>
+	 * <ul>
+	 * 		<li>
+	 * 			"M" : display the menu (calls
+	 * 			{@linkplain game.engine.Game#displayMenu Game.displayMenu})
+	 * 		</li>
+	 * 		<li>
+	 * 			"1" : create a new character (calls
+	 * 			{@linkplain game.engine.Game#createCharacter Game.createCharacter})
+	 * 		</li>
+	 * 		<li>
+	 * 			"2" : choose a monster to fight (calls
+	 * 			{@linkplain game.engine.Game#fightMonster Game.fightMonster})
+	 * 		</li>
+	 * 		<li>
+	 * 			"3" : display the current character's statistics (calls
+	 * 			{@linkplain game.engine.Game#displayCharacterInfo Game.displayCharacterInfo})
+	 * 		</li>
+	 * 		<li>
+	 * 			"4" : exit the game loop and close the program
+	 * 		</li>
+	 * </ul>
+	 * 
+	 * @param args Array of command line arguments
+	 */
 	public static void main(String[] args) {
 		
 		Scanner menuPrompt = new Scanner(System.in);
