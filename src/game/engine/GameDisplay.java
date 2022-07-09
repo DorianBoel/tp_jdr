@@ -4,7 +4,7 @@ import game.entities.Monster;
 import game.entities.PlayerCharacter;
 
 /**
- * Non-instanciable service class containing methods used
+ * Non-instanciable class containing methods used to
  * display specific messages to the user based on different
  * game states.
  *
