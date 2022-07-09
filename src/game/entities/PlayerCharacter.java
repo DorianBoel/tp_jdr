@@ -7,7 +7,7 @@ package game.entities;
  */
 public class PlayerCharacter extends GameCharacter {
 
-	// Instance attributes
+	
 	/**
 	 * The player's current total score
 	 */
