@@ -1,11 +1,30 @@
 package game.entities;
 
-public class Monster extends GameCharacter{
+/**
+ * Represents a monster for the player character to fight against.
+ *
+ * @author DorianBoel
+ */
+public class Monster extends GameCharacter {
 
+	/**
+	 * The monster's type.
+	 */
 	private final String type;
+	
+	/**
+	 * The amount of score points the monster yields once defeated.
+	 */
 	private int points;
 	
-	// Constructor
+	/**
+	 * Constructor for {@link Monster}.
+	 * The monster's health, strength, and the amount of points it gives 
+	 * when defeated vary depending on the given type
+	 * (<em>loup</em>, <em>gobelin</em> or <em>troll</em>).
+	 * 
+	 * @param type The given monster type
+	 */
 	public Monster(String type) {
 		this.type = type;
 		switch (type) {
@@ -29,11 +48,20 @@ public class Monster extends GameCharacter{
 		}
 	}
 
-	// Getters
+	/**
+	 * Getter for {@link #type}.
+	 * 
+	 * @return This monster's type
+	 */
 	public String getType() {
 		return type;
 	}
 
+	/**
+	 * Getter for {@link #points}.
+	 * 
+	 * @return The amount of points this monster yields once defeated
+	 */
 	public int getPoints() {
 		return points;
 	}
