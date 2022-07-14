@@ -14,7 +14,7 @@ import game.entities.PlayerCharacter;
  *
  * @author DorianBoel
  */
-public class Game {
+public final class Game {
 
 	/**
 	 * The player character currently in use.
@@ -29,6 +29,11 @@ public class Game {
 	 * @see game.entities.Monster
 	 */
 	private static Monster currentMonster;
+	
+	/**
+	 * Don't let anyone instantiate this class
+	 */
+	private Game() {}
 	
 	/**
 	 * Displays the game start message and the main menu
@@ -174,7 +179,7 @@ public class Game {
 	 * Once the fight is over, displays the results by showing the new score in case of a player win,
 	 * or a game over in case of a loss.
 	 * 
-	 * @param type The type of the monster to fight
+	 * @param type The type of monster to fight
 	 */
 	private static void fight(String type) {
 		if (playerCharacter.getHealth() <= 0) {

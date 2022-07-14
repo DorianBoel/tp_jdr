@@ -1,7 +1,7 @@
 package game.entities;
 
 /**
- * Represents a character within the game.
+ * Represents a character (player or non-player) within the game.
  *
  * @author DorianBoel
  */
@@ -20,6 +20,9 @@ public abstract class GameCharacter {
 	/**
 	 * Inflicts a given amount of damage to this character
 	 * by substracting it from its current health points.
+	 * If the health value becomes negative as a result,
+	 * it is readjusted to 0.
+	 * 
 	 * @param damage The amount of damage the character receives
 	 */
 	public void receiveDamage(int damage) {

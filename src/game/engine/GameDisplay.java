@@ -10,7 +10,12 @@ import game.entities.PlayerCharacter;
  *
  * @author DorianBoel
  */
-public class GameDisplay {
+public final class GameDisplay {
+	
+	/**
+	 * Don't let anyone instantiate this class
+	 */
+	private GameDisplay() {}
 	
 	/**
 	 * Displays a specific message based on a current given game state

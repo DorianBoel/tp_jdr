@@ -9,8 +9,13 @@ import java.util.Scanner;
  *
  * @author DorianBoel
  */
-public class MenuSelect {
+public final class MenuSelect {
 
+	/**
+	 * Don't let anyone instantiate this class
+	 */
+	private MenuSelect() {}
+	
 	/**
 	 * Prompts the user for input as long as the received input is not
 	 * inside the given list of valid options.
