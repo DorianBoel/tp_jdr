@@ -52,7 +52,7 @@ public final class GameDisplay {
 	 * 		</li>
 	 * </ul>
 	 * 
-	 * @param state A flag describing on a specific game state determining
+	 * @param state A flag describing a specific game state determining
 	 * which message to display
 	 */
 	public static void displayState(String state) {
